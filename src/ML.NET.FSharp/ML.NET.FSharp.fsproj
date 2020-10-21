@@ -1,0 +1,312 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Common.fs" />
+        <Compile Include="AutoPrediction.fs" />
+        <Compile Include="EmotionAnalysis.fs" />
+        <Compile Include="CharacterRecognition.fs" />
+        <Compile Include="IrisClassification.fs" />
+        <Compile Include="ElectricBikeRentPrediction.fs" />
+        <Compile Include="CarPricePrediction.fs" />
+        <Compile Include="SpamDetection.fs" />
+        <Compile Include="TitanicPrediction.fs" />
+        <Compile Include="NetflixMovieRecommender.fs" />
+        <Compile Include="HousePricePrediction.fs" />
+        <Compile Include="DemoCarPricePrediction.fs" />
+        <Compile Include="Program.fs" />
+        
+        <Content Include="Data\test_data.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\train_data.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\mnist_test.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\mnist_train.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\flipkart_com-ecommerce_sample.csv" />
+        <Content Include="Data\iris.txt">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\2pageSessions.csv" />
+        <Content Include="Data\newsCorpora.csv" />
+        <Content Include="Data\SalaryTest.csv" />
+        <Content Include="Data\SalaryTrain.csv" />
+        <Content Include="Data\titanic\test_data.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\titanic\train_data.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\spam.tsv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\iris-data.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\review.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-007.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-013.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-012.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-006.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-010.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-004.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-005.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-011.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-015.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-001.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-014.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-002.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-016.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-017.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-003.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-019.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-018.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-020.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-008.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\pizza\pizza-009.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-020.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-008.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-009.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-019.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-018.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-001.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-015.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-014.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-016.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-002.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-017.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-013.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-007.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-006.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-012.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-004.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-010.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-011.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\sushi\sushi-005.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-019.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-018.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-020.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-008.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-009.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-007.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-013.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-012.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-006.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-010.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-004.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-005.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-011.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-015.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-001.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-014.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-002.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-016.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\imageclassification\hotdog\hot-dog-017.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Folder Include="Data\imageclassification\model" />
+        <Content Include="Data\sushi-test.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\hot-dog-test.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\minst\mnist_test.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\minst\mnist_train.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\mnist-digits-test.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\mnist-digits-train.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\housing.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\sentimentlabels\imdb_labelled.txt">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\sentimentlabels\review.txt" />
+        <Content Include="Data\sentimentlabels\amazon_cells_labelled.txt">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\recommendation\recommendation-ratings-test.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\recommendation\recommendation-ratings-train.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\recommendation\recommendation-movies.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\car_listings.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\image_assets\inputs\data\broccoli.png">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\image_assets\inputs\data\toaster3.jpg">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\image_assets\inputs\data\wikimedia.md">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\image_assets\inputs\data\tags.tsv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\image_assets\inputs\data\pizza3.jpg">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\image_assets\inputs\data\teddy6.jpg">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\image_assets\inputs\imageClassifier.zip">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Data\electric_bike_demand.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+       
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FSharp.Plotly" Version="1.2.2" />
+      <PackageReference Include="Microsoft.ML" Version="1.5.2" />
+      <PackageReference Include="Microsoft.ML.AutoML" Version="0.17.2" />
+      <PackageReference Include="Microsoft.ML.FastTree" Version="1.5.2" />
+      <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="1.5.2" />
+      <PackageReference Include="Microsoft.ML.Mkl.Components" Version="1.5.2" />
+      <PackageReference Include="Microsoft.ML.Recommender" Version="0.17.2" />
+      <PackageReference Include="Microsoft.ML.Vision" Version="1.5.2" />
+      <PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.3.0" />
+    </ItemGroup>
+
+</Project>
