@@ -9,12 +9,14 @@ open ML.NET.FSharp
 [<EntryPoint>]
 let main argv =
 
+    RecommendationEngine.runPrediction()
+
+
     // DemoCarPricePrediction.runPrediction()
     // CarPricePrediction.runPrediction()
-
     // SpanDetection.runPrediction()
     // CharacterRecognition.runPrediction()
-    NetflixMovieRecommender.runPrediction()
+    // NetflixMovieRecommender.runPrediction()
 
 
     // EXTRAS
